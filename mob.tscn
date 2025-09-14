@@ -45,17 +45,18 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jbnni"]
-radius = 47.0
-height = 132.0
+radius = 36.0
+height = 90.0
 
 [node name="Mob" type="RigidBody2D" groups=["mobs"]]
+scale = Vector2(0.5, 0.5)
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource("1_1qmh0")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.75, 0.75)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_pcqmr")
 animation = &"fly"
 frame_progress = 0.490094
