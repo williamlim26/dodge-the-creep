@@ -52,12 +52,13 @@ height = 132.0
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource("1_1qmh0")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_pcqmr")
 animation = &"fly"
-frame_progress = 0.464305
+frame_progress = 0.490094
 speed_scale = 3.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
