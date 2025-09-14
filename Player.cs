@@ -77,8 +77,7 @@ public partial class Player : Area2D
     {
         Hide(); // Player dissapears after being hit.
         EmitSignal(SignalName.Hit);
-
-        GetNode<CollisionShape2D>("CollisionShape2D").SetDeferred(CollisionObject2D.PropertyName.DisableMode, true);
+        GetNode<CollisionShape2D>("CollisionShape2D").SetDeferred(CollisionShape2D.PropertyName.Disabled, true);
     }
 
     public void Start(Vector2 position)
