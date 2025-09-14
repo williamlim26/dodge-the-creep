@@ -18,6 +18,8 @@ public partial class Main : Node
         GetNode<Timer>("ScoreTimer").Stop();
         GetNode<Hud>("Hud").ShowGameOver();
         GetTree().CallGroup("mobs", Node.MethodName.QueueFree);
+        GetNode<AudioStreamPlayer>("Music").Stop();
+        GetNode<AudioStreamPlayer>("DeathSound").Play();
     }
 
     public void NewGame()
@@ -34,7 +36,7 @@ public partial class Main : Node
         hud.UpdateScore(_score);
         hud.ShowMessage("Get Ready!");
 
-        // GetTree().CallGroup("mobs", Node.MethodName.QueueFree);
+        GetNode<AudioStreamPlayer>("Music").Play();
     }
 
     // We also specified this function name in PascalCase in the editor's connection window.
